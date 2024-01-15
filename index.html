@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Bryan Quiceno (KMEO)</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <div class="barra-navegacion">
+        <div class="menu">
+          <nav>
+            <ul>
+              <li class="menu-items"><a href="#musica">Musica</a></li>
+              <li class="menu-items"><a href="https://www.youtube.com/@BryanQuicenoValencia/featured">Videos</a></li>
+              <li class="menu-items"><a href="#contact">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="logo"><img src="./images/logo.png" alt="" /></div>
+        <div class="redes-sociales">
+          <nav>
+            <ul class="social-navbar">
+              <li class="social-items"><a href="https://www.youtube.com/@BryanQuicenoValencia">Youtube</a></li>
+              <li class="social-items"><a href="https://www.instagram.com/bryanquiceno/">Instagram</a></li>
+              <li class="social-items"><a href="https://www.facebook.com/bryan.quicenovalencia/">Facebook</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="contenido-portada">
+        <div>
+          <video autoplay muted loop>
+            <source src="./video/BryanQuiceno.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+                      c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+                      c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"
+            ></path>
+          </svg>
+        </div>
+        <!-- <div class="filtro"></div> -->
+      </div>
+
+      <!-- aqui la sexion de contratos -->
+      <div class="section-article">
+        <div class="article">
+          <section>
+            <h1>Bienvenidos a mi Rincón Musical</h1>
+            <div class="elementor-separator">
+              <h2 class="separator"></h2>
+            </div>
+            <p>
+              Somos <b>KMEO</b>, uno apasionados cantantes de música colombiana
+              que lleva la esencia y la tradición de las baladas de los años 60
+              y 80 a nuevos horizontes. Nuestra versatilidad se refleja en la
+              interpretación de emocionantes piezas de salsa, merengue, rock en
+              español y cumbias, fusionando la riqueza de la música latina en
+              cada nota.
+            </p>
+            <!-- <p>
+              Con una carrera dedicada a explorar las múltiples facetas de la
+              música, nuestro objetivo es ofrecerte una experiencia sonora única
+              y cautivadora. Acompáñame en este viaje musical donde cada melodía
+              cuenta una historia y cada actuación es un encuentro íntimo con la
+              pasión y la expresión artística. ¡Descubre la magia de la música
+              latina y déjate llevar por la emoción de cada interpretación!
+            </p> -->
+          </section>
+        </div>
+        <div class="">
+          <iframe class="video-youtube"
+            src="https://www.youtube.com/embed/1hr3fB-P_4U?si=8xcf9-fqlNOKiFD1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <section class="galery slider">
+        <img src="./images/IMG_3670.jpg" alt="" />
+        <img src="./images/IMG_3687.jpg" alt="" />
+        <img src="./images/IMG_3928.jpg" alt="" />
+        <img src="./images/IMG_4049.jpg" alt="" />
+        <img src="./images/IMG_4056.jpg" alt="" />
+        <img src="./images/IMG_4087.jpg" alt="" />
+      </section>
+
+      <!-- reproductor de musica -->
+      <div class="container-player" id="musica">
+        <div class="player">
+          <div class="name">
+            <span id="labelName"></span>
+          </div>
+
+          <div class="previous">
+            <span class="material-symbols-outlined">skip_previous</span>
+          </div>
+
+          <div class="play" id="play">
+            <span class="material-symbols-outlined">play_circle</span>
+          </div>
+
+          <div class="stop hidden" id="stop">
+            <span class="material-symbols-outlined" hidden=1 >stop_circle</span>
+          </div>
+
+          <div class="next">
+            <span class="material-symbols-outlined">skip_next</span>
+          </div> 
+          
+          <span class="material-symbols-outlined container-volume-icons">volume_up</span>
+          
+          <div class="container-volume">
+            <input class="volumen volume" type="range" max="1" min="0"  step="0.01"/>
+          </div>
+          <div class="list-song">
+            <div class="song friky" id="Friky" value="Fryky - Junior Roots">
+              <span>1 - </span>
+              <span class="Friky">Fryky Junior Roots</span>
+              <span class="material-symbols-outlined">play_arrow</span>
+            </div>
+            <div class="song" id="Ya">
+              <span>2 - </span>
+              <span class="Ya">Ya no te amo KMEO</span>
+              
+              <span class="material-symbols-outlined ">play_arrow</span>
+            </div>
+            <div class="song" id="Contigo">
+              <span>3 - </span>
+              <span class="Contigo">Contigo a solas KMEO</span>
+              
+              <span class="material-symbols-outlined ">play_arrow</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="contact"></div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

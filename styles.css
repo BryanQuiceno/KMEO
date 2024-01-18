@@ -55,24 +55,23 @@ a{
   text-decoration: none;
   color: var(--spring-green-100);
 }
+
 .cabecera {
-    z-index: 33;
+  z-index: 33;
   display: flex;
   width: 100%;
   height: 5em;
   position: absolute;
-  background-color: var(--spring-green-950op);
+  /* background-color: var(--spring-green-950op); */
   align-items: baseline;
 }
 
 .barra-navegacion {
-  
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-
   font-size: 1.5em;
 }
 .menu {
@@ -87,6 +86,7 @@ a{
   gap: 30%;
   justify-content: center;
 }
+
 .logo {
   width: 12em;
   display: flex;
@@ -102,14 +102,14 @@ a{
 .redes-sociales {
   width: 100%;
   display: flex;
-
-  justify-content: center;
+  margin: 1em;
+  justify-content: flex-end;
   /* flex-grow: 2; */
 }
 .redes-sociales ul {
+  justify-content: flex-end;
   display: flex;
-  gap: 30%;
-  justify-content: center;
+  gap: 40%;
 }
 
 /* ---------------------------------------------portada--------------------------------------------- */
@@ -125,6 +125,7 @@ a{
   color: #fff;
 }
 video {
+
   position: relative;
   z-index: 1;
   width: 100vw;
@@ -172,7 +173,7 @@ svg{
   border-radius: 2em;
 }
 .video-youtube{
-  
+  aspect-ratio: 10 / 16;
   margin-top: 4em;
 }
 .elementor-separator{
@@ -195,6 +196,13 @@ svg{
 /* --------------------------------galery-------------------------------- */
 
 @media (max-width: 1080px) {
+
+.center-galery{
+  display: flex;
+  width: 100vw;
+  
+  /* left: 10vw; */
+}
  .slider{
   aspect-ratio: 10 / 16;
   width: 100%;
@@ -202,29 +210,86 @@ svg{
   display: flex;
   overflow: scroll;
   scroll-snap-type: x mandatory;
+  border-radius: 5px;
+  
  } 
  .slider img{
   width: 100vw;
-  left: 0;
+  left: 0vw;
   position: sticky;
   object-fit: cover;
-  border-radius: 5px;
-  scroll-snap-align: center;
+  border-radius: 10px;
+  scroll-snap-align: start;
  }
  .article{
   width: 90%;
  }
+
  .barra-navegacion{
+  height: 95vh;
+  background-color: var(--spring-green-900);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: relative;
+  left: -100%;
+  
+  
+  /* flex-wrap: wrap; */
+ }
+.menu-btn{
+display: flex;
+position: absolute;
+left: 0;
+margin: .5em;
+z-index: 99;
+}
+.menu-btn svg{
+  fill: #eefff6;
+  transition: 1s;
+  transform: rotate(0deg);
+  
+}
+.menu li{
+  text-align: center;
+}
+ .menu ul{
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: column;
+ }
+ .redes-sociales{
+  justify-content: center;
+ }
+.redes-sociales ul{
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+ .barra-navegacion li{
+  margin: 1rem 0;
+ }
+.barra-navegacion{
+  font-size: 2em;
+}
+ .logo{
   display: none;
  }
  .video-youtube{
   width: 100vw;
+  height: 62.5vw
 }
 .container-player{
   width: 90vw;
 }
+
 }
 @media (min-width: 1080px) {
+  .menu-btn{
+    display: none;
+  }
   .galery{
     margin-top: 4em;
     display: flex;
@@ -243,6 +308,9 @@ svg{
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
+  }
+  .footer{
+    width:20%;
   }
 }
 
@@ -345,4 +413,58 @@ svg{
 .list-song div:hover{
   opacity: .9;
   cursor: pointer;
+}
+
+/* ------------------------------------------------footer------------------------------------------------ */
+
+.contact{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact h2{
+ font-size: 3em;
+ color: var(--spring-green-100);
+ margin: 1em;
+}
+.contact-container{
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  
+  flex-wrap: wrap;
+}
+.contact-container div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em;
+  gap: 1em;
+  
+}
+.contact-container h3{
+  font-size: 2em;
+  color: var(--spring-green-100);
+}
+.contact-container svg{
+  fill: var(--spring-green-100);
+}
+.contact-container a{
+  font-size: 1.5em;
+}
+.contact-container p{
+  color: var(--spring-green-100);
+  font-size: 1.5em;
+}
+.footer{
+  border-top: solid 3px var(--spring-green-800);
+  height: 50px;
+  width: 90vw;
+  background-color: rgb(0, 42, 21);
+  padding: 5vw;
+}
+.footer p {
+  color: var(--spring-green-100);
 }
